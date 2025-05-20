@@ -5,26 +5,29 @@ import { useEffect } from 'react';
 
 export default function HomePage() {
   useEffect(() => {
-    // Enable smooth scrolling globally
     document.documentElement.style.scrollBehavior = 'smooth';
   }, []);
 
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-blue-500 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
-          <h1 className="text-2xl font-bold">CONNECT WITH PEOPLE</h1>
-          <div className="space-x-6">
-            <a href="#home" className="hover:underline">Home</a>
-            <a href="#features" className="hover:underline">Features</a>
-            <a href="#about-us" className="hover:underline">About us</a>
-            <a href="#reviews" className="hover:underline">Reviews</a>
-            <Link href="/auth/login" className="bg-white text-blue-500 px-4 py-2 rounded hover:bg-gray-100">Log in</Link>
+      <nav className="bg-white text-blue-500 shadow-2xl border-b-2 border-gray-300 rounded-b-2xl">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
+    <div className="flex items-center space-x-4">
+      <img src="/logo.png" alt="Logo" className="w-30 h-30" />
+      <span className="text-3xl font-extrabold">CONNECT</span>
+    </div>
+    <div className="space-x-8 text-lg font-semibold">
+      <a href="#home" className="hover:text-blue-700 transition-colors duration-200">Home</a>
+      <a href="#features" className="hover:text-blue-700 transition-colors duration-200">Features</a>
+      <a href="#about-us" className="hover:text-blue-700 transition-colors duration-200">About us</a>
+      <a href="#reviews" className="hover:text-blue-700 transition-colors duration-200">Reviews</a>
+      <Link href="/auth/login" className="bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-200">Log in</Link>
+    </div>
+  </div>
+</nav>
 
-          </div>
-        </div>
-      </nav>
+
 
       {/* Hero Section */}
       <header id="home" className="bg-blue-100 py-16 text-center">
@@ -32,7 +35,7 @@ export default function HomePage() {
         <p className="text-lg text-gray-700 mb-6">
           Create posts, share ideas, and gather opinions through interactive polls. Experience the future with enhanced AR/MR features that bring your social interactions to life.
         </p>
-        <Link href="/signup" className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Get Started</Link>
+        <Link href="/auth/login" className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">Get Started</Link>
       </header>
 
       {/* Features Section */}
@@ -43,25 +46,17 @@ export default function HomePage() {
             {/* Feature 1 */}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center group transform transition-transform duration-300 hover:scale-105">
               <div className="overflow-hidden">
-                <img
-                  src="/Pictures Front end/create-posts.jpg"
-                  alt="Create Posts"
-                  className="mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
-                />
+                <img src="/Pictures Front end/create-posts.jpg" alt="Create Posts" className="mx-auto mb-2 transition-transform duration-300 group-hover:scale-110" />
               </div>
               <h4 className="text-xl font-bold mb-2">Create Posts</h4>
               <p className="text-gray-600">Share your thoughts, ideas, and creativity with the world.</p>
-              <Link href="/features/create-posts" className="text-blue-500 hover:underline mt-4 block">Read More</Link>
+              <Link href="/Features/post" className="text-blue-500 hover:underline mt-4 block">Read More</Link>
             </div>
 
             {/* Feature 2 */}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center group transform transition-transform duration-300 hover:scale-105">
               <div className="overflow-hidden">
-                <img
-                  src="/Pictures Front end/share-posts.jpg"
-                  alt="Share Posts"
-                  className="mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
-                />
+                <img src="/Pictures Front end/share-posts.jpg" alt="Share Posts" className="mx-auto mb-2 transition-transform duration-300 group-hover:scale-110" />
               </div>
               <h4 className="text-xl font-bold mb-2">Share Posts with Others</h4>
               <p className="text-gray-600">Seamlessly share your content with others and spread your message.</p>
@@ -71,11 +66,7 @@ export default function HomePage() {
             {/* Feature 3 */}
             <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center group transform transition-transform duration-300 hover:scale-105">
               <div className="overflow-hidden">
-                <img
-                  src="/Pictures Front end/create-polls.jpg"
-                  alt="Create Polls"
-                  className="mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
-                />
+                <img src="/Pictures Front end/create-polls.jpg" alt="Create Polls" className="mx-auto mb-2 transition-transform duration-300 group-hover:scale-110" />
               </div>
               <h4 className="text-xl font-bold mb-2">Create Polls</h4>
               <p className="text-gray-600">Gather opinions and insights quickly with interactive polls.</p>
@@ -93,109 +84,57 @@ export default function HomePage() {
             We aim to redefine the way people connect and interact online. Our platform empowers users to express themselves creatively, share meaningful moments, and engage with communities that inspire them.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <img src="/Pictures Front end/team1.jpg" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
-              <h4 className="font-bold">Shehana Hewage</h4>
-            </div>
-            <div className="text-center">
-              <img src="/Pictures Front end/team2.jpg" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
-              <h4 className="font-bold">Disanda Epaladeniya</h4>
-            </div>
-            <div className="text-center">
-              <img src="/Pictures Front end/team3.jpg" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
-              <h4 className="font-bold">Himal Anuruddha</h4>
-            </div>
-            <div className="text-center">
-              <img src="/Pictures Front end/team4.jpg" alt="Team Member" className="w-24 h-24 rounded-full mx-auto mb-4" />
-              <h4 className="font-bold">Milinda Madhushan</h4>
-            </div>
+            {["Shehana Hewage", "Disanda Epaladeniya", "Himal Anuruddha", "Milinda Madhushan"].map((name, i) => (
+              <div className="text-center" key={i}>
+                <img src={`/Pictures Front end/team${i + 1}.jpg`} alt={name} className="w-24 h-24 rounded-full mx-auto mb-4" />
+                <h4 className="font-bold">{name}</h4>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Customer Reviews Section */}
-{/* Customer Reviews Section */}
-<section id="reviews" className="py-16">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h3 className="text-2xl font-bold text-center mb-12">CUSTOMER REVIEWS</h3>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {/* Review 1 */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:scale-105">
-        {/* Reviewer Image */}
-        <div className="mb-4">
-          <img
-            src="/Pictures Front end/reviewer1.jpeg"
-            alt="Sarah M."
-            className="w-20 h-20 rounded-full mx-auto"
-          />
-        </div>
-        {/* Stars */}
-        <div className="mb-4">
-          <div className="flex justify-center">
-            {[...Array(5)].map((_, i) => (
-              <span key={i} className="text-yellow-500 text-lg">★</span>
+      <section id="reviews" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 className="text-2xl font-bold text-center mb-12">CUSTOMER REVIEWS</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "Sarah M. (Content Creator)",
+                img: "/Pictures Front end/reviewer1.jpeg",
+                stars: 5,
+                review: "I absolutely love this platform! It's so easy to create and share posts.",
+              },
+              {
+                name: "Daniel K. (Community Enthusiast)",
+                img: "/Pictures Front end/reviewer2.jpeg",
+                stars: 4,
+                review: "This website has completely transformed the way I interact online.",
+              },
+              {
+                name: "Priya R. (Student & Poll Enthusiast)",
+                img: "/Pictures Front end/reviewer3.jpeg",
+                stars: 3,
+                review: "I joined to stay updated on my favorite topics, and I've been hooked ever since!",
+              },
+            ].map(({ name, img, stars, review }, i) => (
+              <div key={i} className="bg-gray-100 p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:scale-105">
+                <div className="mb-4">
+                  <img src={img} alt={name} className="w-20 h-20 rounded-full mx-auto" />
+                </div>
+                <div className="mb-4 flex justify-center">
+                  {[...Array(5)].map((_, j) => (
+                    <span key={j} className={j < stars ? "text-yellow-500" : "text-gray-300"}>★</span>
+                  ))}
+                </div>
+                <p className="text-gray-700">"{review}"</p>
+                <h4 className="mt-4 font-bold">{name}</h4>
+              </div>
             ))}
           </div>
         </div>
-        {/* Review Content */}
-        <p className="text-gray-700">"I absolutely love this platform! It's so easy to create and share posts."</p>
-        <h4 className="mt-4 font-bold">Sarah M. (Content Creator)</h4>
-      </div>
-
-      {/* Review 2 */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:scale-105">
-        {/* Reviewer Image */}
-        <div className="mb-4">
-          <img
-            src="/Pictures Front end/reviewer2.jpeg"
-            alt="Daniel K."
-            className="w-20 h-20 rounded-full mx-auto"
-          />
-        </div>
-        {/* Stars */}
-        <div className="mb-4">
-          <div className="flex justify-center">
-            {[...Array(4)].map((_, i) => (
-              <span key={i} className="text-yellow-500 text-lg">★</span>
-            ))}
-            <span className="text-gray-300 text-lg">★</span>
-          </div>
-        </div>
-        {/* Review Content */}
-        <p className="text-gray-700">"This website has completely transformed the way I interact online."</p>
-        <h4 className="mt-4 font-bold">Daniel K. (Community Enthusiast)</h4>
-      </div>
-
-      {/* Review 3 */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-md text-center transition-transform duration-300 hover:scale-105">
-        {/* Reviewer Image */}
-        <div className="mb-4">
-          <img
-            src="/Pictures Front end/reviewer3.jpeg"
-            alt="Priya R."
-            className="w-20 h-20 rounded-full mx-auto"
-          />
-        </div>
-        {/* Stars */}
-        <div className="mb-4">
-          <div className="flex justify-center">
-            {[...Array(3)].map((_, i) => (
-              <span key={i} className="text-yellow-500 text-lg">★</span>
-            ))}
-            {[...Array(2)].map((_, i) => (
-              <span key={i} className="text-gray-300 text-lg">★</span>
-            ))}
-          </div>
-        </div>
-        {/* Review Content */}
-        <p className="text-gray-700">"I joined to stay updated on my favorite topics, and I've been hooked ever since!"</p>
-        <h4 className="mt-4 font-bold">Priya R. (Student & Poll Enthusiast)</h4>
-      </div>
-    </div>
-  </div>
-</section>
-
-
+      </section>
 
       {/* Footer */}
       <footer className="bg-blue-500 text-white py-8">
