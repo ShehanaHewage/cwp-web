@@ -1,0 +1,185 @@
+body{
+    margin: 0;
+    font-family: 'Helvetica CE', sans-serif;
+    color:#0066CF;
+    background: #FFFFFF;
+}
+
+/*Backgroundhome - Nav bar*/
+.backgroundhome {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(backgroundpic.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+
+}
+
+/*Navigation bar*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.navbar .logo{
+    font-family: 'Jungle Fever NF';
+    font-size: 36px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.navbar .login-btn a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 5px 15px;
+    border-radius: 16px;
+}
+
+
+/*Background*/
+
+.background{
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('backgroundpic.jpg');
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.background h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.background p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.get-started-btn {
+    background: #017FFF;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*Features*/
+
+#features {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 30%;
+    background: #D8EAFC;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.card p {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.card button {
+    background: #017FFF;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/*About Us*/
+
+#about-us {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/*Team*/
+#team {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.member img {
+    border-radius: 50%;
+    width: 137px;
+    height: 137px;
+}
+
+.member p {
+    font-size: 16px;
+    color: #017FFF;
+    margin-top: 10px;
+}
+
+/*Review*/
+#reviews {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.review {
+    width: 30%;
+    border: 2px solid #017FFF;
+    padding: 20px;
+    border-radius: 28px;
+    background: #FFFFFF;
+}
