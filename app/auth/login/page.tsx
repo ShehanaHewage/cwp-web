@@ -3,13 +3,25 @@
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card'
 import LoginForm from './_comps/LoginForm'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex flex-col md:flex-row justify-center items-center p-4 md:p-8">
       <div className="flex flex-col items-center md:items-start mb-8 md:mb-0 md:mr-16 max-w-md">
-        <h1 className="text-4xl md:text-6xl font-bold text-blue-600 mb-4">CWP</h1>
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2">Connect with People</h2>
+        <div className="flex flex-col items-center mb-4">
+          <Image
+            src="/logo.png" // Replace with your actual logo path inside /public
+            alt="Connect Logo"
+            width={200}
+            height={120}
+            className="mb-1" // Reduced margin between image and text
+          />
+          <h1 className="text-4xl md:text-6xl font-bold text-blue-600">Connect</h1>
+        </div>
+        <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-2 text-center md:text-left">
+          Connect with People
+        </h2>
         <p className="text-gray-600 text-center md:text-left text-lg">
           Join the community and connect with friends, share moments, and discover new relationships.
         </p>
