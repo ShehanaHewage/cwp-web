@@ -60,7 +60,7 @@ export default function HomePage() {
               </div>
               <h4 className="text-xl font-bold mb-2">Share Posts with Others</h4>
               <p className="text-gray-600">Seamlessly share your content with others and spread your message.</p>
-              <Link href="/features/share-posts" className="text-blue-500 hover:underline mt-4 block">Read More</Link>
+              <Link href="/Features/share" className="text-blue-500 hover:underline mt-4 block">Read More</Link>
             </div>
 
             {/* Feature 3 */}
@@ -70,7 +70,7 @@ export default function HomePage() {
               </div>
               <h4 className="text-xl font-bold mb-2">Create Polls</h4>
               <p className="text-gray-600">Gather opinions and insights quickly with interactive polls.</p>
-              <Link href="/features/create-polls" className="text-blue-500 hover:underline mt-4 block">Read More</Link>
+              <Link href="/Features/polls" className="text-blue-500 hover:underline mt-4 block">Read More</Link>
             </div>
           </div>
         </div>
